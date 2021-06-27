@@ -6,11 +6,21 @@
     max-width: 1170px;
     margin: 0 auto;
 }
+body{
+    background-color: #ebebeb;
+}
 
 header{
     width: 100%;
     height: 120px;
     position: fixed;
+}
+
+.title{
+    text-transform: uppercase;
+    font-size: rem(36px);
+    font-weight: 700;
+    font-family: 'Proxima Nova Semibold';
 }
 
 .btn{
@@ -136,4 +146,434 @@ header{
             background-color: $font-color-black;
         }
     }
+}
+
+.services{
+    &_list{
+        display: grid;
+        grid-template-columns: calc((100%* 380) /1170) calc((100%* 380) /1170) calc((100%* 410) /1170);
+        grid-template-rows: repeat(2, fr);
+    }
+    &_item{
+        padding: 100px 0 136px;
+        // height: 400px;
+        text-align: center;
+        svg{
+            margin-bottom: 7px;
+        }
+        &.big{
+            grid-column: 3 / span 4;
+            grid-row: 1 / span 2;
+            .services_title{
+                color: $font-color-white;
+                margin-bottom: 118px;
+                font-size: rem(36px);
+                letter-spacing: 1px;
+            }
+            .services_description{
+                color: $font-color-white;
+                max-width: 350px;
+                b{
+                    font-style: normal;
+                }
+            }
+
+        }
+        &.grey{
+            background-color: #dbdbdb;
+        }
+    }
+    &_title{
+        font-family: 'PT Sans', sans-serif;
+        font-weight: 700;
+        color: $font-color-black;
+        text-transform: uppercase;
+        font-size: rem(24px);
+        margin-bottom: 18px;
+    }
+    &_description{
+        font-family: 'PT Sans', sans-serif;
+        font-style: italic;
+        color: $font-color-black;
+        width: 90%;
+        max-width: 200px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: rem(18px);
+    }
+}
+
+.works{
+    background: center center / cover no-repeat;
+    padding: 48px 0 60px;
+    text-align: center;
+    position: relative;
+    &_slider-container{
+        width: 90%;
+        max-width: 730px;
+        margin: 0 auto 46px;
+    }
+    &_logo{
+        width: 40px;
+        height: 60px;
+        margin-bottom: 36px;
+    }
+    &_title{
+        color: $font-color-white;
+        margin-bottom: 68px;
+    }    
+    &_slider-item{
+        width: 100%;
+        height: 550px;
+    }
+    &_btn{
+        border-color: $font-color-white;
+        color: $font-color-white;
+        &:hover{
+            background-color: $font-color-white;
+            color: $font-color-black;
+        }
+    }
+    .prev_slide,
+    .next_slide{
+        width: 26px;
+        height: 26px;
+        border-bottom: 2px solid $font-color-white;
+        border-left: 2px solid $font-color-white;
+        position: absolute;       
+    }
+    .prev_slide{
+        top: 50%;
+        transform: translateY(-50%);
+        left: 8%;
+        transform: rotate(45deg);
+    }
+    .next_slide {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 8%;
+        transform: rotate(-135deg);
+    }
+}
+
+
+.lSSlideOuter .lSPager.lSpg>li a{
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: transparent;
+    &:focus,
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+.lSPager.lSpg {
+    margin-top: 30px!important;
+}
+
+.lSSlideOuter .lSPager.lSpg>li.active a,
+.lSSlideOuter .lSPager.lSpg>li:hover a{
+    background-color: #fff;
+}
+
+
+.team{
+    padding: 60px 0 98px;
+    text-align: center;
+    position: relative;
+    .lSSlideOuter .lSPager.lSpg>li a{
+        display: none;
+    }
+    &_logo{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 34px;
+    }
+    &_title{
+        color: $font-color-black;
+        margin-bottom: 70px;
+    }
+    &_slider{
+       height: 475px; 
+    }
+    &_container{
+        max-width: 1110px;
+    }
+    .prev_slide,
+    .next_slide {
+        width: 26px;
+        height: 26px;
+        border-bottom: 2px solid $font-color-black;
+        border-left: 2px solid $font-color-black;
+        position: absolute;
+    }
+    .prev_slide {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 3%;
+        transform: rotate(45deg);
+    }
+    .next_slide {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 3%;
+        transform: rotate(-135deg);
+    }
+    
+}
+
+.member{
+    width: 90%;
+    max-width: 350px;
+    &_info-wrap{
+        padding-top: 150px;
+        padding-bottom: 45px;
+        margin-top: -125px;
+        background-color: #fff;
+    }
+    &_photo{
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+        img{
+            border-radius: 50%;
+            border: 12px solid #ebebeb;            
+        }
+    }
+    &_name{
+        text-transform: uppercase;
+        font-size: rem(24px);
+        font-family: 'Proxima Nova Bold', sans-serif;
+        color: $font-color-purple;
+        margin-bottom: 32px;
+    }
+    &_position{
+        font-family: 'PT Sans', sans-serif;
+        font-style: italic;
+        font-size: rem(24px);
+        color: $font-color-black;
+        // margin-bottom: 50px;
+    }
+    &_soc-list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $font-color-purple;
+        height: 70px;
+        padding: 0 45px;
+    }
+    &_soc-item{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #fff;
+        line-height: 32px;
+        transition: .2s;
+        i{
+            color: $font-color-purple;
+        }
+        &:hover{
+            background-color: $font-color-purple;
+            i{
+                font-size: rem(18px);
+                color: #fff;
+            }
+        }
+    }
+}
+
+.contact{
+    background: center center / cover no-repeat;
+    padding: 56px 0 52px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    &_logo{
+        width: 42px;
+        height: 60px;
+        margin-bottom: 24px;
+    }
+    &_title{
+        color: $font-color-white;
+        margin-bottom: 270px;
+    }
+    &_container{
+        max-width: 860px;
+    }
+    &_form{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 55px;
+    }
+    &_input-wrap {
+        width: calc(50% - 15px);
+        height: 55px;
+        position: relative;
+        margin-bottom: 25px;
+    }
+    &_input{
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        background-color: rgba($color: $font-color-white, $alpha: .4);
+        border: 1px solid transparent;
+        outline: none;
+        padding-left: 22px;
+        &:focus {
+            border-color: $font-color-purple;
+        }
+
+    }
+    &_placeholder{
+        position: absolute;
+        color: $font-color-white;
+        font-size: rem(18px);
+        font-style: italic;
+        font-family: 'PT Sans', sans-serif;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        
+    }
+    &_star{
+        color: $font-color-black;
+    }
+    &_textarea-wrap{
+        position: relative;
+        width: 100%;
+        height: 200px;        
+        .contact_placeholder{
+            top: 20%;
+            left: 3%;
+        }
+    }
+    &_textarea{
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        background-color: rgba($color: $font-color-white, $alpha: .4);
+        border: 1px solid transparent;
+        outline: none;
+        padding-left: 22px;
+        padding-top: 24px;
+        resize: none;
+        &:focus {
+            border-color: $font-color-purple;
+        }
+    }
+    &_btn{
+        width: 100%;
+        max-width: 293px;
+        height: 70px;
+        border-radius: 3px;
+        border: none;
+        background-color: $font-color-purple;
+        border-bottom: 3px solid #8783b0;
+        color: $font-color-white;
+        font-family: 'Proxima Nova Bold', sans-serif;
+        font-size: rem(20px);
+        transition: .3s;
+        cursor: pointer;
+        &:hover, &:focus{
+            background-color: #8783b0;
+            border-color: $font-color-purple;
+        }
+    }
+    &_sticker {
+        width: 90%;
+        max-width: 347px;
+        height: 90px;
+        display: flex;
+        position: absolute;
+        right: -19.5%;
+        top: 25%;
+        transition: .4s;
+        cursor: pointer;
+        &.phone{
+            top: 34.9%;
+            &:hover, &:focus{
+                right: 0;
+            }
+        }
+        &.address{
+            &:hover,
+            &:focus {
+                right: 0;
+            }
+        }        
+
+        &-icon_wrap {
+            width: 90px;
+            height: 100%;
+            background-color: $font-color-purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: 36px;
+                width: 40px;
+                &.phone{
+                    width: 20px;
+                }
+            }
+        }
+        &-info_wrap{
+            width: 257px;
+            height: 100%;
+            background-color: rgba($color: $font-color-white, $alpha: .4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            a{
+                font-size: rem(18px);
+                color: $font-color-black;
+                font-family: 'PT Sans', sans-serif;
+                &:hover{
+                    color: $font-color-white;
+                }
+            }
+        }
+    }
+}
+
+.contact_input:focus+
+.contact_placeholder,
+.contact_input:not(:placeholder-shown)+
+.contact_placeholder, 
+.contact_textarea:focus+
+.contact_placeholder, 
+.contact_textarea:not(:placeholder-shown)+
+.contact_textarea{
+    display: none;
+}
+
+.footer{
+    height: 185px;
+    background: $font-color-purple;
+    &_container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        max-width: 1110px;
+    }
+    &_copy{
+        font-size: rm(18px);
+        color: $font-color-white;
+        font-family: 'PT Sans', sans-serif;
+    }
+    .member_soc-list{
+        padding: 0;
+        width: 100%;
+        max-width: 262px;
+    } 
+    .member_soc-item{
+        text-align: center;
+    }   
 }

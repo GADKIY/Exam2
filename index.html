@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative digital projects</title>
+    <link rel="stylesheet" href="assets/plugins/dist/css/lightslider.min.css">
+    <link rel="stylesheet" href="assets/plugins/slick/slick.css">
+    <link rel="stylesheet" href="assets/plugins/slick/slick-theme.css">
     <link rel="stylesheet" href="assets/style/font.css">
     <link rel="stylesheet" href="assets/style/style.min.css">
 </head>
@@ -66,10 +69,10 @@
             </div>
         </section>
         <section class="services" id="services">
-            <div class="container grid">
+            <div class="container">
                 <ul class="services_list">
-                    <li class="services_item">
-                        <svg width="60" height="50">
+                    <li class="services_item grey a">
+                        <svg width="60" height="64">
                             <use xlink:href="assets/svg/sprite.svg#penholder"></use>
                         </svg>
                         <h6 class="services_title">
@@ -91,7 +94,7 @@
                         </div>
                     </li>
                     <li class="services_item">
-                        <svg width="61" height="54">
+                        <svg width="61" height="64">
                             <use xlink:href="assets/svg/sprite.svg#globe"></use>
                         </svg>
                         <h6 class="services_title">
@@ -101,8 +104,8 @@
                             Cras mattis consectetur purus sit amet fermentum.
                         </div>
                     </li>
-                    <li class="services_item">
-                        <svg width="36" height="61">
+                    <li class="services_item grey">
+                        <svg width="36" height="64">
                             <use xlink:href="assets/svg/sprite.svg#mobile"></use>
                         </svg>
                         <h6 class="services_title">
@@ -112,54 +115,69 @@
                             Cras mattis consectetur purus sit amet fermentum.
                         </div>
                     </li>
-                    <li class="services_item">
-                        <!-- TODO: bg img -->
-                        <svg width="50" height="58">
+                    <li class="services_item lazy-bg big" data-src="assets/img/services.jpg">
+                        <svg width="50" height="64">
                             <use xlink:href="assets/svg/sprite.svg#bill"></use>
                         </svg>
                         <h6 class="services_title">
                             Our Services
                         </h6>
                         <div class="services_description">
-                            “Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.”
+                            “Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.”<br>
                             <b>- Borat -</b>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="works" id="works">
-            <!-- TODO: svg -->
-            <h2 class="works_title">Recent works</h2>
-            <ul class="works_slider" id="works_slider">
-                <li class="works_slider-item">
-                    <!-- TODO: img -->
-                </li>
-                <li class="works_slider-item">
-                    <!-- TODO: img -->
-                </li>
-                <li class="works_slider-item">
-                    <!-- TODO: img -->
-                </li>
-                <li class="works_slider-item">
-                    <!-- TODO: img -->
-                </li>
-            </ul>
+        <section class="works lazy-bg" id="works" data-src="assets/img/worksBG.jpg">
+            <img class="works_logo lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="pen"
+                data-src="assets\img\Icon-Works.png">
+            <h2 class="works_title title">Recent works</h2>
+            <div class="works_slider-container">
+                <ul class="works_slider" id="works_slider">
+                    <li class="works_slider-item">
+                        <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            alt="product" data-src="assets/img/caruselimage.jpg">
+                    </li>
+                    <li class="works_slider-item">
+                        <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            alt="product" data-src="assets/img/caruselimage.jpg">
+                    </li>
+                    <li class="works_slider-item">
+                        <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            alt="product" data-src="assets/img/caruselimage.jpg">
+                    </li>
+                    <li class="works_slider-item">
+                        <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                            alt="product" data-src="assets/img/caruselimage.jpg">
+                    </li>
+                </ul>
+                <a href="javascript:void(0)" class="prev_slide" id="prev_slide"></a>
+                <a href="javascript:void(0)" class="next_slide" id="next_slide"></a>
+            </div>
+            <a href="#" class="btn works_btn">Vew Gallery</a>                
         </section>
         <section class="team" id="team">
-            <div class="container">
-                <!-- TODO: svg -->
-                <h2 class="team_title">Meet our team</h2>
+            <div class="container team_container">
+                <img class="team_logo lazy"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="pen"
+                    data-src="assets\img\Icon-Team.png">
+                <h2 class="team_title title">Meet our team</h2>
                 <ul class="team_slider" id="team_slider">
-                    <li class="slider_item">
+                    <li class="member slider_item">                        
                         <div class="member_photo">
-                            <img src="#" alt="name">
+                            <img class="lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                alt="name" data-src="assets/img/miguel.png">
                         </div>
-                        <div class="member_name">
-                            Miguel Orbien
-                        </div>
-                        <div class="member_position">
-                            CEO & Founder
+                        <div class="member_info-wrap">
+                            <div class="member_name">
+                                Miguel Orbien
+                            </div>
+                            <div class="member_position">
+                                CEO & Founder
+                            </div>
                         </div>
                         <ul class="member_soc-list">
                             <li class="member_soc-item"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer nofollow" title="linkedin"><i class="icon icon-linkedin2"></i></a></li>
@@ -168,16 +186,20 @@
                             <li class="member_soc-item"><a href="https://twitter.com/?lang=ru" target="_blank" rel="noreferrer nofollow" title="twitter"><i class="icon icon-twitter"></i></a></li>
                         </ul>
                     </li>
-                    <li class="slider_item">
+                    <li class="member slider_item">
                         <div class="member_photo">
-                            <img src="#" alt="name">
+                            <img class="lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                alt="name" data-src="assets/img/jackie.png">
                         </div>
+                        <div class="member_info-wrap">
                         <div class="member_name">
                             Jackie Carrol
                         </div>
                         <div class="member_position">
                             Art Director
                         </div>
+                        </div>
                         <ul class="member_soc-list">
                             <li class="member_soc-item"><a href="https://www.behance.net/" target="_blank" rel="noreferrer nofollow" title="behance"><i class="icon icon-behance"></i></a></li>
                             <li class="member_soc-item"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer nofollow" title="linkedin"><i class="icon icon-linkedin2"></i></a></li>
@@ -186,15 +208,41 @@
                             <li class="member_soc-item"><a href="https://twitter.com/?lang=ru" target="_blank" rel="noreferrer nofollow" title="twitter"><i class="icon icon-twitter"></i></a></li>
                         </ul>
                     </li>
-                    <li class="slider_item">
+                    <li class="member slider_item">
                         <div class="member_photo">
-                            <img src="#" alt="name">
+                            <img class="lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                alt="name" data-src="assets/img/ida.png">
                         </div>
+                        <div class="member_info-wrap">
+                            <div class="member_name">
+                                Ida Morrison
+                            </div>
+                            <div class="member_position">
+                                Designer
+                            </div>                            
+                        </div>
+                        <ul class="member_soc-list">
+                            <li class="member_soc-item"><a href="https://www.behance.net/" target="_blank" rel="noreferrer nofollow" title="behance"><i class="icon icon-behance"></i></a></li>
+                            <li class="member_soc-item"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer nofollow" title="linkedin"><i class="icon icon-linkedin2"></i></a></li>
+                            <li class="member_soc-item"><a href="https://www.instagram.com/?hl=ru" target="_blank" rel="noreferrer nofollow" title="googleplus"><i class="icon icon-google-plus"></i></a></li>
+                            <li class="member_soc-item"><a href="https://www.facebook.com/" target="_blank" rel="noreferrer nofollow" title="facebook"><i class="icon icon-facebook"></i></a></li>
+                            <li class="member_soc-item"><a href="https://twitter.com/?lang=ru" target="_blank" rel="noreferrer nofollow" title="twitter"><i class="icon icon-twitter"></i></a></li>
+                        </ul>
+                    </li>
+                    <li class="member slider_item">
+                        <div class="member_photo">
+                            <img class="lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                alt="name" data-src="assets/img/johny.jpg">
+                        </div>
+                        <div class="member_info-wrap">
                         <div class="member_name">
-                            Ida Morrison
+                            Johny Sins 
                         </div>
                         <div class="member_position">
-                            Designer
+                            Actor
+                        </div>
                         </div>
                         <ul class="member_soc-list">
                             <li class="member_soc-item"><a href="https://www.behance.net/" target="_blank" rel="noreferrer nofollow" title="behance"><i class="icon icon-behance"></i></a></li>
@@ -204,33 +252,19 @@
                             <li class="member_soc-item"><a href="https://twitter.com/?lang=ru" target="_blank" rel="noreferrer nofollow" title="twitter"><i class="icon icon-twitter"></i></a></li>
                         </ul>
                     </li>
-                    <li class="slider_item">
+                    <li class="member slider_item">
                         <div class="member_photo">
-                            <img src="#" alt="name">
+                            <img class="lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
+                                alt="name" data-src="assets/img/miguel.png">
                         </div>
+                        <div class="member_info-wrap">
                         <div class="member_name">
                             Miguel Orbien
                         </div>
                         <div class="member_position">
                             CEO & Founder
                         </div>
-                        <ul class="member_soc-list">
-                            <li class="member_soc-item"><a href="https://www.behance.net/" target="_blank" rel="noreferrer nofollow" title="behance"><i class="icon icon-behance"></i></a></li>
-                            <li class="member_soc-item"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer nofollow" title="linkedin"><i class="icon icon-linkedin2"></i></a></li>
-                            <li class="member_soc-item"><a href="https://www.instagram.com/?hl=ru" target="_blank" rel="noreferrer nofollow" title="googleplus"><i class="icon icon-google-plus"></i></a></li>
-                            <li class="member_soc-item"><a href="https://www.facebook.com/" target="_blank" rel="noreferrer nofollow" title="facebook"><i class="icon icon-facebook"></i></a></li>
-                            <li class="member_soc-item"><a href="https://twitter.com/?lang=ru" target="_blank" rel="noreferrer nofollow" title="twitter"><i class="icon icon-twitter"></i></a></li>
-                        </ul>
-                    </li>
-                    <li class="slider_item">
-                        <div class="member_photo">
-                            <img src="#" alt="name">
-                        </div>
-                        <div class="member_name">
-                            Miguel Orbien
-                        </div>
-                        <div class="member_position">
-                            CEO & Founder
                         </div>
                         <ul class="member_soc-list">
                             <li class="member_soc-item"><a href="https://www.behance.net/" target="_blank" rel="noreferrer nofollow" title="behance"><i class="icon icon-behance"></i></a></li>
@@ -241,28 +275,58 @@
                         </ul>
                     </li>
                 </ul>
+                <a href="javascript:void(0)" class="prev_slide" id="prev_slide-team"></a>
+                <a href="javascript:void(0)" class="next_slide" id="next_slide-team"></a>
             </div>
         </section>
-        <section class="contact" id="contact">
-            <div class="container">
-                <!-- TODO: svg -->
-                <h2 class="contact_title">Get in touch</h2>
+        <section class="contact lazy-bg" id="contact" data-src="assets/img/map.jpg">
+            <div class="container contact_container">
+                <img class="contact_logo lazy"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="map"
+                    data-src="assets\img\contact.png">
+                <h2 class="contact_title title">Get in touch</h2>
                 <div class="contact_form-wrap">
                     <form action="#" method="POST" name="message" class="contact_form">
-                        <input type="text" id="userName">
-                        <label for="userName">Your Name <span>*</span></label>
-                        <input type="text" id="userEmail">
-                        <label for="userEmail">Your Email <span>*</span></label>
-                        <textarea id="userMessage"></textarea>
-                        <label for="userMessage">Your Message <span>*</span></label>
-                        <button class="btb btn-submit" id="sendInfo" type="submit">Send Message</button>
+                        <div class="contact_input-wrap">
+                            <input placeholder="&nbsp;" class="contact_input" type="text" id="userName" data-required>
+                            <label class="contact_placeholder" for="userName">Your Name <span class="contact_star">*</span></label>
+                        </div>
+                        <div class="contact_input-wrap">
+                            <input placeholder="&nbsp;" class="contact_input" type="text" id="userEmail" data-required>
+                            <label class="contact_placeholder second" for="userEmail">Your Email <span class="contact_star">*</span></label>                            
+                        </div>
+                        <div class="contact_textarea-wrap">
+                            <textarea placeholder="&nbsp;" class="contact_textarea" id="userMessage" data-required></textarea>
+                            <label class="contact_placeholder" for="userMessage">Your Message <span class="contact_star">*</span></label>
+                        </div>
                     </form>
+                    <button class="btb contact_btn" id="sendInfo" type="submit">Send Message</button>
+                </div>
+            </div>
+            <div class="contact_sticker address">
+                <div class="contact_sticker-icon_wrap">
+                    <img src="assets/img/Icon-Address.png" alt="address">
+                </div>
+                <div class="contact_sticker-info_wrap">
+                     <a href="https://goo.gl/maps/MgRmi53R5VooEAP56" target="_blank" rel="noreferrer nofollow" title="adress">
+                        Ikan Piranha Atas 220C
+                        Malang - East Java
+                        Indonesia   
+                    </a>
+                </div>
+            </div>
+            <div class="contact_sticker phone">
+                <div class="contact_sticker-icon_wrap">
+                    <img class="phone" src="assets/img/phone.png" alt="phone">
+                </div>
+                <div class="contact_sticker-info_wrap">
+                    <a href="tel:+0013568682454" target="_blank" title="phone">+00 135 6868 2454</a>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container">
+    <footer class="footer">
+        <div class="container footer_container">
             <div class="footer_copy">
                 &copy;2014 <b>tulus</b>driyo. All Rights Reserved. 
             </div>
@@ -277,9 +341,11 @@
     </footer>
 
 
-
-    <script src="assets/js/intersection-observer.js"></script>
-    <script src="assets/js/lazyload.js"></script>
+    <script src="assets/plugins/jquery-3.6.0.min.js"></script>
+    <script src="assets/plugins/dist/js/lightslider.min.js"></script>
+    <script src="assets/plugins/intersection-observer.js"></script>
+    <script src="assets/plugins/lazyload.js"></script>
+    <script src="assets/plugins/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

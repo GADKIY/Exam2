@@ -29,10 +29,21 @@ img {
   margin: 0 auto;
 }
 
+body {
+  background-color: #ebebeb;
+}
+
 header {
   width: 100%;
   height: 120px;
   position: fixed;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: "Proxima Nova Semibold";
 }
 
 .btn {
@@ -153,4 +164,415 @@ header {
   border-color: #fff;
   color: #fff;
   background-color: #665f60;
+}
+
+.services_list {
+  display: grid;
+  grid-template-columns: calc((100%* 380) /1170) calc((100%* 380) /1170) calc((100%* 410) /1170);
+  grid-template-rows: repeat(2, fr);
+}
+.services_item {
+  padding: 100px 0 136px;
+  text-align: center;
+}
+.services_item svg {
+  margin-bottom: 7px;
+}
+.services_item.big {
+  grid-column: 3/span 4;
+  grid-row: 1/span 2;
+}
+.services_item.big .services_title {
+  color: #fff;
+  margin-bottom: 118px;
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+}
+.services_item.big .services_description {
+  color: #fff;
+  max-width: 350px;
+}
+.services_item.big .services_description b {
+  font-style: normal;
+}
+.services_item.grey {
+  background-color: #dbdbdb;
+}
+.services_title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  color: #665f60;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+.services_description {
+  font-family: "PT Sans", sans-serif;
+  font-style: italic;
+  color: #665f60;
+  width: 90%;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+
+.works {
+  background: center center/cover no-repeat;
+  padding: 48px 0 60px;
+  text-align: center;
+  position: relative;
+}
+.works_slider-container {
+  width: 90%;
+  max-width: 730px;
+  margin: 0 auto 46px;
+}
+.works_logo {
+  width: 40px;
+  height: 60px;
+  margin-bottom: 36px;
+}
+.works_title {
+  color: #fff;
+  margin-bottom: 68px;
+}
+.works_slider-item {
+  width: 100%;
+  height: 550px;
+}
+.works_btn {
+  border-color: #fff;
+  color: #fff;
+}
+.works_btn:hover {
+  background-color: #fff;
+  color: #665f60;
+}
+.works .prev_slide,
+.works .next_slide {
+  width: 26px;
+  height: 26px;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  position: absolute;
+}
+.works .prev_slide {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8%;
+  transform: rotate(45deg);
+}
+.works .next_slide {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8%;
+  transform: rotate(-135deg);
+}
+
+.lSSlideOuter .lSPager.lSpg > li a {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.lSSlideOuter .lSPager.lSpg > li a:focus, .lSSlideOuter .lSPager.lSpg > li a:hover {
+  background-color: #fff;
+}
+
+.lSPager.lSpg {
+  margin-top: 30px !important;
+}
+
+.lSSlideOuter .lSPager.lSpg > li.active a,
+.lSSlideOuter .lSPager.lSpg > li:hover a {
+  background-color: #fff;
+}
+
+.team {
+  padding: 60px 0 98px;
+  text-align: center;
+  position: relative;
+}
+.team .lSSlideOuter .lSPager.lSpg > li a {
+  display: none;
+}
+.team_logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 34px;
+}
+.team_title {
+  color: #665f60;
+  margin-bottom: 70px;
+}
+.team_slider {
+  height: 475px;
+}
+.team_container {
+  max-width: 1110px;
+}
+.team .prev_slide,
+.team .next_slide {
+  width: 26px;
+  height: 26px;
+  border-bottom: 2px solid #665f60;
+  border-left: 2px solid #665f60;
+  position: absolute;
+}
+.team .prev_slide {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3%;
+  transform: rotate(45deg);
+}
+.team .next_slide {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 3%;
+  transform: rotate(-135deg);
+}
+
+.member {
+  width: 90%;
+  max-width: 350px;
+}
+.member_info-wrap {
+  padding-top: 150px;
+  padding-bottom: 45px;
+  margin-top: -125px;
+  background-color: #fff;
+}
+.member_photo {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+.member_photo img {
+  border-radius: 50%;
+  border: 12px solid #ebebeb;
+}
+.member_name {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: "Proxima Nova Bold", sans-serif;
+  color: #9f9acf;
+  margin-bottom: 32px;
+}
+.member_position {
+  font-family: "PT Sans", sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #665f60;
+}
+.member_soc-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #9f9acf;
+  height: 70px;
+  padding: 0 45px;
+}
+.member_soc-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  line-height: 32px;
+  transition: 0.2s;
+}
+.member_soc-item i {
+  color: #9f9acf;
+}
+.member_soc-item:hover {
+  background-color: #9f9acf;
+}
+.member_soc-item:hover i {
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+.contact {
+  background: center center/cover no-repeat;
+  padding: 56px 0 52px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.contact_logo {
+  width: 42px;
+  height: 60px;
+  margin-bottom: 24px;
+}
+.contact_title {
+  color: #fff;
+  margin-bottom: 270px;
+}
+.contact_container {
+  max-width: 860px;
+}
+.contact_form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 55px;
+}
+.contact_input-wrap {
+  width: calc(50% - 15px);
+  height: 55px;
+  position: relative;
+  margin-bottom: 25px;
+}
+.contact_input {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid transparent;
+  outline: none;
+  padding-left: 22px;
+}
+.contact_input:focus {
+  border-color: #9f9acf;
+}
+.contact_placeholder {
+  position: absolute;
+  color: #fff;
+  font-size: 1.125rem;
+  font-style: italic;
+  font-family: "PT Sans", sans-serif;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contact_star {
+  color: #665f60;
+}
+.contact_textarea-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.contact_textarea-wrap .contact_placeholder {
+  top: 20%;
+  left: 3%;
+}
+.contact_textarea {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid transparent;
+  outline: none;
+  padding-left: 22px;
+  padding-top: 24px;
+  resize: none;
+}
+.contact_textarea:focus {
+  border-color: #9f9acf;
+}
+.contact_btn {
+  width: 100%;
+  max-width: 293px;
+  height: 70px;
+  border-radius: 3px;
+  border: none;
+  background-color: #9f9acf;
+  border-bottom: 3px solid #8783b0;
+  color: #fff;
+  font-family: "Proxima Nova Bold", sans-serif;
+  font-size: 1.25rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.contact_btn:hover, .contact_btn:focus {
+  background-color: #8783b0;
+  border-color: #9f9acf;
+}
+.contact_sticker {
+  width: 90%;
+  max-width: 347px;
+  height: 90px;
+  display: flex;
+  position: absolute;
+  right: -19.5%;
+  top: 25%;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.contact_sticker.phone {
+  top: 34.9%;
+}
+.contact_sticker.phone:hover, .contact_sticker.phone:focus {
+  right: 0;
+}
+.contact_sticker.address:hover, .contact_sticker.address:focus {
+  right: 0;
+}
+.contact_sticker-icon_wrap {
+  width: 90px;
+  height: 100%;
+  background-color: #9f9acf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact_sticker-icon_wrap img {
+  height: 36px;
+  width: 40px;
+}
+.contact_sticker-icon_wrap img.phone {
+  width: 20px;
+}
+.contact_sticker-info_wrap {
+  width: 257px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+.contact_sticker-info_wrap a {
+  font-size: 1.125rem;
+  color: #665f60;
+  font-family: "PT Sans", sans-serif;
+}
+.contact_sticker-info_wrap a:hover {
+  color: #fff;
+}
+
+.contact_input:focus + .contact_placeholder,
+.contact_input:not(:placeholder-shown) + .contact_placeholder,
+.contact_textarea:focus + .contact_placeholder,
+.contact_textarea:not(:placeholder-shown) + .contact_textarea {
+  display: none;
+}
+
+.footer {
+  height: 185px;
+  background: #9f9acf;
+}
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1110px;
+}
+.footer_copy {
+  font-size: rm(18px);
+  color: #fff;
+  font-family: "PT Sans", sans-serif;
+}
+.footer .member_soc-list {
+  padding: 0;
+  width: 100%;
+  max-width: 262px;
+}
+.footer .member_soc-item {
+  text-align: center;
 }
