@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /
+
+Sitemap: https://gadkiy.github.io/Examm/sitemap.xml
+
+Host: gadkiy.github.io/Exam2/
