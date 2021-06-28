@@ -637,6 +637,13 @@ header {
 .contact_star {
   color: #665f60;
 }
+.contact_err_msg {
+  position: absolute;
+  top: -35%;
+  left: 5%;
+  font-family: "PT Sans", sans-serif;
+  color: orangered;
+}
 .contact_textarea-wrap {
   position: relative;
   width: 100%;
@@ -645,6 +652,10 @@ header {
 .contact_textarea-wrap .contact_placeholder {
   top: 20%;
   left: 3%;
+}
+.contact_textarea-wrap .contact_err_msg {
+  top: -10%;
+  left: 2.5%;
 }
 .contact_textarea {
   width: 100%;
@@ -755,12 +766,43 @@ header {
 .contact_sticker-info_wrap a:hover {
   color: #fff;
 }
+.contact_alert {
+  width: 300px;
+  height: 150px;
+  border-radius: 4px;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding-top: 70px;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+.contact_alert#error {
+  border: 2px solid #e91f29;
+  background: rgba(228, 62, 62, 0.4);
+  display: none;
+}
+.contact_alert#done {
+  border: 2px solid #1fe973;
+  background: rgba(68, 226, 139, 0.4);
+  display: none;
+}
 
 .contact_input:focus + .contact_placeholder,
 .contact_input:not(:placeholder-shown) + .contact_placeholder,
 .contact_textarea:focus + .contact_placeholder,
 .contact_textarea:not(:placeholder-shown) + .contact_textarea {
   display: none;
+}
+
+.has_err input, .has_err textarea {
+  border-color: orangered;
 }
 
 .footer {

@@ -96,7 +96,92 @@ $(function(){
         }
     });
 
+    /* Telegram */
+
+    $('#contact_form').on('submit', function (e) {
+        e.preventDefault();
+        sendMessage($(this));
+    });
+
+    $('input, textarea').on('focus', function(){
+        if ($(this).attr('name') !== 'email'){
+            if($(this).parents(".form_row").hasClass("has_err")){
+                $(this).parents(".form_row").removeClass("has_err");
+                $(this).siblings('.contact_err_msg').text("");
+            }
+        }
+    });
+
+    $('input[name="email"]').on('keyup', function(){
+        if ($(this).val() === '') {
+            valid = false;
+            $(this).parents(".form_row").addClass("has_err");
+            $(this).siblings('.contact_err_msg').text("Field is required");
+        } else{
+            if (!isValidEmail($(this).val())) {
+                valid = false;
+                $(this).parents(".form_row").addClass("has_err");
+                $(this).siblings('.contact_err_msg').text("Invalid email");
+            }else{
+                $(this).parents(".form_row").removeClass("has_err");
+                $(this).siblings('.contact_err_msg').text("");
+            }
+        }
+    });
+
 });
+
+function isValidEmail(email) {
+    let val_mail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return val_mail.test(email);
+}
+
+function clearForm() {
+    $('#userName').val('');
+    $('#userEmail').val('');
+    $('#userMessage').val('');
+}
+
+function sendMessage($form){
+    const textName = userName.value;
+    const userMail = userEmail.value;
+    const userMsg = userMessage.value;
+    const BOT_TOKEN = '1805815235:AAHhJ2ANt1NK959V7ZydmoGYllw7B9KQjVs';
+    const CHAT_ID = '-1001420667055';
+    let valid = true;
+    $form.find('*[data-required]').each(function(){
+        if($(this).val() === ''){
+            valid = false;
+            $(this).parents(".form_row").addClass("has_err");
+            $(this).siblings('.contact_err_msg').text("Field is required");
+        }else{
+            if($(this).attr('name')==='email'){
+                if (!isValidEmail($(this).val())){
+                    valid = false;
+                    $(this).parents(".form_row").addClass("has_err");
+                    $(this).siblings('.contact_err_msg').text("Invalid email");
+                }
+            }
+        }
+    });
+    if(valid){
+        $.ajax({
+            url: ('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage?chat_id=' + CHAT_ID + '&text=' + 'Name: ' + textName + 'Email: ' + userMail + 'message: ' + userMsg),
+            type: 'GET',
+            success: function(resp){
+                if(resp.ok == true){
+                    $('#done').fadeIn(200);
+                    $('#done').delay(4000).fadeOut(400);
+                    clearForm();
+                }else{
+                    $('#error').fadeIn(200);
+                    $('#error').delay(2000).fadeOut(400);
+                    clearForm();
+                }
+            }
+        })
+    }
+}
 
 window.addEventListener('scroll',()=>{
     let offset = window.pageYOffset;

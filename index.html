@@ -104,16 +104,16 @@
     <link rel="stylesheet" href="assets/style/hamburger.min.css">
     <link rel="stylesheet" href="assets/style/style.min.css">
     <!-- OG -->
-        <meta property="og:locale" content="uk_UA">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Creative digital projects">
-        <meta property="og:description" content="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.">
-        <meta name="description" content="Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. ">
-        <meta property="og:url" content="https://gadkiy.github.io/Exam2/">
-        <meta property="og:site_name" content="Creative digital projects">
-        <meta property="og:image:width" content="600">
-        <meta property="og:image:height" content="600">
-        <meta property="og:image" content="https://gadkiy.github.io/Exam2/assets/img/siteimage.jpg">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Creative digital projects">
+    <meta property="og:description" content="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.">
+    <meta name="description" content="Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. ">
+    <meta property="og:url" content="https://gadkiy.github.io/Exam2/">
+    <meta property="og:site_name" content="Creative digital projects">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="600">
+    <meta property="og:image" content="https://gadkiy.github.io/Exam2/assets/img/siteimage.jpg">
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -426,21 +426,30 @@
                     data-src="assets\img\contact.png">
                 <h2 class="contact_title title">Get in touch</h2>
                 <div class="contact_form-wrap">
-                    <form action="#" method="POST" name="message" class="contact_form">
-                        <div class="contact_input-wrap">
-                            <input placeholder="&nbsp;" class="contact_input" type="text" id="userName" data-required>
+                    <form action="#" method="POST" name="message" class="contact_form" id="contact_form">
+                        <div class="contact_input-wrap form_row">
+                            <input placeholder="&nbsp;" class="contact_input" type="text" id="userName" name="name" data-required>
                             <label class="contact_placeholder" for="userName">Your Name <span class="contact_star">*</span></label>
+                            <div class="contact_err_msg"></div>
                         </div>
-                        <div class="contact_input-wrap">
-                            <input placeholder="&nbsp;" class="contact_input" type="text" id="userEmail" data-required>
+                        <div class="contact_input-wrap form_row">
+                            <input placeholder="&nbsp;" class="contact_input" type="text" id="userEmail" name="email" data-required>
                             <label class="contact_placeholder second" for="userEmail">Your Email <span class="contact_star">*</span></label>                            
+                            <div class="contact_err_msg"></div>
                         </div>
-                        <div class="contact_textarea-wrap">
-                            <textarea placeholder="&nbsp;" class="contact_textarea" id="userMessage" data-required></textarea>
+                        <div class="contact_textarea-wrap form_row">
+                            <textarea placeholder="&nbsp;" class="contact_textarea" id="userMessage" name="text" data-required></textarea>
                             <label class="contact_placeholder" for="userMessage">Your Message <span class="contact_star">*</span></label>
+                            <div class="contact_err_msg"></div>
                         </div>
                     </form>
-                    <button class="btb contact_btn" id="sendInfo" type="submit">Send Message</button>
+                    <button form="contact_form" class="btb contact_btn" id="sendInfo" type="submit">Send Message</button>
+                </div>
+                <div class="contact_alert" id="error">
+                    Please enter correct data
+                </div>
+                <div class="contact_alert" id="done">
+                    Thank you=)
                 </div>
             </div>
             <div class="contact_sticker address">
@@ -485,6 +494,6 @@
     <script src="assets/plugins/dist/js/lightslider.min.js"></script>
     <script src="assets/plugins/intersection-observer.js"></script>
     <script src="assets/plugins/lazyload.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.min.js"></script>
 </body>
 </html>
