@@ -38,10 +38,11 @@ body{
 }
 
 .to_top {
+    cursor: pointer;
     display: none;
     position: fixed;
     right: 30px;
-    bottom: 40px;
+    bottom: 150px;
     width: 85px;
     height: 85px;
     text-align: center;

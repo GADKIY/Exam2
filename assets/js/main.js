@@ -1,4 +1,10 @@
 $(function(){
+
+    $(window).on('scroll', ()=>{
+        let offset = window.pageYOffset;
+        parallax.style.backgroundPositionY = offset * 0.7 + 'px';
+    });
+
    const works_slider =  $('#works_slider').lightSlider({
         item: 1,
         slideMove: 1,
@@ -183,7 +189,3 @@ function sendMessage($form){
     }
 }
 
-window.addEventListener('scroll',()=>{
-    let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = offset*0.7+'px';
-});

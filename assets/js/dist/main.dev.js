@@ -1,6 +1,10 @@
 "use strict";
 
 $(function () {
+  $(window).on('scroll', function () {
+    var offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = offset * 0.7 + 'px';
+  });
   var works_slider = $('#works_slider').lightSlider({
     item: 1,
     slideMove: 1,
@@ -180,8 +184,3 @@ function sendMessage($form) {
     });
   }
 }
-
-window.addEventListener('scroll', function () {
-  var offset = window.pageYOffset;
-  parallax.style.backgroundPositionY = offset * 0.7 + 'px';
-});
