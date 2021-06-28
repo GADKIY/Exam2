@@ -824,7 +824,7 @@ header {
   max-width: 1110px;
 }
 .footer_copy {
-  font-size: rm(18px);
+  font-size: 1.125rem;
   color: #fff;
   font-family: "PT Sans", sans-serif;
 }
