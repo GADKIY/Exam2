@@ -5,13 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative digital projects</title>
+    <!-- critical style -->
+    <style>
+        header {
+        width: 100%;
+        height: 120px;
+        position: fixed;
+        z-index: 999;
+        -webkit-transition: 0.1s;
+        -o-transition: 0.1s;
+        transition: 0.1s;
+        }
+
+        .header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 100%;
+        padding: 0 30px;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        }
+        .header_logo svg {
+        fill: #fff;
+        }
+        .header_menu-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        }
+        .header_menu-item {
+        margin-right: 26px;
+        }
+        .header_menu-item:last-child {
+        margin-left: 0;
+        }
+        .header_menu-item a {
+        text-transform: uppercase;
+        font-family: "Proxima Nova Semibold", sans-serif;
+        color: #fff;
+        font-size: 1.5rem;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        outline: none;
+        }
+        .header_menu-item a:hover {
+        color: #665f60;
+        }
+
+        .Header {
+        background: rgba(159, 154, 207, 0.4);
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        height: 60px;
+        }
+
+        .mobile-header {
+        width: 90%;
+        height: 60px;
+        }
+        .mobile-header .header_logo svg {
+        height: 40px;
+        }
+
+        .big-screen {
+        padding: 400px 0 514px;
+        background: center center/cover no-repeat;
+        text-align: center;
+        }
+        .big-screen_title {
+        color: #fff;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        font-family: "Proxima Nova Bold", sans-serif;
+        margin-bottom: 44px;
+        }
+        .big-screen_description {
+        color: #fff;
+        font-size: 1.875rem;
+        font-family: "PT Sans", sans-serif;
+        font-style: italic;
+        width: 90%;
+        max-width: 660px;
+        margin: 0 auto;
+        }
+    </style>
+    <!-- Style -->
     <link rel="stylesheet" href="assets/plugins/dist/css/lightslider.min.css">
-    <link rel="stylesheet" href="assets/plugins/slick/slick.css">
-    <link rel="stylesheet" href="assets/plugins/slick/slick-theme.css">
     <link rel="stylesheet" href="assets/style/font.css">
+    <link rel="stylesheet" href="assets/style/hamburger.min.css">
     <link rel="stylesheet" href="assets/style/style.min.css">
+    <!-- OG -->
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+
+    <div class="mobile_menu">
+        <button class="hamburger hamburger--emphatic" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <div class="header_logo">
+            <svg width="53.531" height="72">
+                <use xlink:href="assets/svg/sprite.svg#logo"></use>
+            </svg>
+        </div>
+        <ul class="header_menu-list">
+            <li class="header_menu-item"><a class="scroll" href="#">Home</a></li>
+            <li class="header_menu-item"><a class="scroll" href="#about">About</a></li>
+            <li class="header_menu-item"><a class="scroll" href="#services">Services</a></li>
+            <li class="header_menu-item"><a class="scroll" href="#works">Works</a></li>
+            <li class="header_menu-item"><a class="scroll" href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div id="mobile_shadow"></div>
+
+    <div class="to_top"><span></span></div>
+
     <header>
         <div class="container header">
             <div class="header_logo">
@@ -20,16 +147,21 @@
                 </svg>
             </div>
             <ul class="header_menu-list">
-                <li class="header_menu-item"><a href="#">Home</a></li>
-                <li class="header_menu-item"><a href="#">About</a></li>
-                <li class="header_menu-item"><a href="#">Services</a></li>
-                <li class="header_menu-item"><a href="#">Works</a></li>
-                <li class="header_menu-item"><a href="#">Contact</a></li>
+                <li class="header_menu-item"><a class="scroll" href="#">Home</a></li>
+                <li class="header_menu-item"><a class="scroll" href="#about">About</a></li>
+                <li class="header_menu-item"><a class="scroll" href="#services">Services</a></li>
+                <li class="header_menu-item"><a class="scroll" href="#works">Works</a></li>
+                <li class="header_menu-item"><a class="scroll" href="#contact">Contact</a></li>
             </ul>
+            <button class="hamburger hamburger--emphatic" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </div>
     </header>
     <main>
-        <section class="big-screen lazy-bg" id="big-screen" data-src="assets/img/bigscreen.jpg">
+        <section class="big-screen lazy-bg" id="parallax" data-src="assets/img/bigscreen.jpg">
             <div class="container">
                 <h1 class="big-screen_title">Creative digital projects</h1>
                 <p class="big-screen_description">
@@ -41,7 +173,6 @@
         <section class="about" id="about">
             <div class="container about_content-wrap">               
                 <div class="about_image-block">
-                    <!-- TODO: img -->
                     <img class="lazy"
                         src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw=="
                         alt="about" data-src="assets/img/aboutBG.jpg">
@@ -49,7 +180,7 @@
                         <svg width="60" height="64">
                             <use xlink:href="assets/svg/sprite.svg#aboutUs"></use>
                         </svg>
-                        <div class="about_text">About Us</div>
+                        <h2 class="about_text">About Us</h2>
                     </div>
                 </div>
                 <div class="about_text-block">
@@ -71,7 +202,7 @@
         <section class="services" id="services">
             <div class="container">
                 <ul class="services_list">
-                    <li class="services_item grey a">
+                    <li class="services_item grey design">
                         <svg width="60" height="64">
                             <use xlink:href="assets/svg/sprite.svg#penholder"></use>
                         </svg>
@@ -82,7 +213,7 @@
                             Cras mattis consectetur purus sit amet fermentum.
                         </div>
                     </li>
-                    <li class="services_item">
+                    <li class="services_item development">
                         <svg width="57" height="57">
                             <use xlink:href="assets/svg/sprite.svg#path"></use>
                         </svg>
@@ -93,7 +224,7 @@
                             Cras mattis consectetur purus sit amet fermentum.
                         </div>
                     </li>
-                    <li class="services_item">
+                    <li class="services_item seo">
                         <svg width="61" height="64">
                             <use xlink:href="assets/svg/sprite.svg#globe"></use>
                         </svg>
@@ -104,7 +235,7 @@
                             Cras mattis consectetur purus sit amet fermentum.
                         </div>
                     </li>
-                    <li class="services_item grey">
+                    <li class="services_item grey mobile">
                         <svg width="36" height="64">
                             <use xlink:href="assets/svg/sprite.svg#mobile"></use>
                         </svg>
@@ -345,7 +476,6 @@
     <script src="assets/plugins/dist/js/lightslider.min.js"></script>
     <script src="assets/plugins/intersection-observer.js"></script>
     <script src="assets/plugins/lazyload.js"></script>
-    <script src="assets/plugins/slick/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
